@@ -1,0 +1,21 @@
+.body{
+  margin-top: 50rpx;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  height: 1000rpx;
+  border: 3px solid black;
+}
+.demo{
+  margin-top: 20rpx;
+  margin-left: 40rpx;
+  margin-right: 40rpx;
+}
+/*.image{
+  margin-top: 20rpx;
+  margin-left: 200rpx;
+  height: 300rpx;
+  width: 300rpx;
+}*/
+.img{
+  margin-left: 200rpx;
+}

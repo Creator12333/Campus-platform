@@ -1,0 +1,33 @@
+<van-cell-group>
+ <van-field
+    value="{{ne.wupinmiaoshu}}"
+    clearable
+    label="物品描述"
+    placeholder="如：一部手机"
+    bind:input="wupinmiaoshu"
+  />
+ <view class="ppp">
+  <picker bindchange="bindPickerLost" value="{{ne.index1}}" range="{{array1}}">
+  <view class="picker">发现的地点:->->{{array1[index1]}}</view>
+  </picker>
+  </view>
+   <van-field
+    value="{{ne.faxiandeshijian}}"
+    clearable
+    label="发现的时间"
+    placeholder="如：2020/5/5 16：00左右"
+    bind:input="faxiandeshijian"
+  />
+   <van-field
+    value="{{ne.lianxifangshi2}}"
+    clearable
+    label="联系方式"
+    placeholder="如：电话/微信/QQ"
+    bind:input="lianxifangshi2"
+  />
+  <view class="view-foot" bindtap="bindImage">
+  <text class="text-foot">物品的图片:->-></text>
+  <image src="{{fileList1}}" mode="aspectFit" class="image"></image>
+  </view>
+  <button type="primary" bindtap="shiwuzhaolingfabu" style="width:80%">确认修改</button>
+  </van-cell-group>

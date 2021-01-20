@@ -1,0 +1,74 @@
+<!-- <view class='box'>
+  <view class='wrapper'>
+    <view class="tab-content {{postFaBu ? 'select' : 'noSelect'}}" bindtap='chooseFaBu'>已发布</view>
+    <view class="tab-content {{postShenHeZhong ? 'select' : 'noSelect'}}" bindtap='chooseShenHeZhong'>审核中</view>
+    <view class="tab-content {{postShenHeShiBai ? 'select' : 'noSelect'}}" bindtap="chooseShenHeShiBai">审核失败</view>
+  </view>
+</view>
+
+<view wx:if = "{{postFaBu}}">
+  <van-card wx:for="{{ne}}" wx:key="_id"
+    num="1"
+    desc="{{item.array1}}"
+    title="{{item.wupinmiaoshu}}"
+    thumb="{{item.fileList1}}"
+  >
+    <div slot="footer">
+      <van-button size="mini" bindtap="xiugai" id="{{item._id}}">修改</van-button>
+      <van-button size="mini" bindtap="shanchu" id="{{item._id}}">删除</van-button>
+    </div>
+  </van-card>
+</view>
+
+<view wx:if = "{{postShenHeZhong}}">
+  <van-card wx:for="{{ne_1}}" wx:key="_id"
+    num="1"
+    desc="{{item.array1}}"
+    title="{{item.wupinmiaoshu}}"
+    thumb="{{item.fileList1}}"
+  >
+  </van-card>
+</view>
+
+<view wx:if = "{{postShenHeShiBai}}">
+  <view class="text">
+    您发布的以下内容违反本平台相关规定，禁止发布，如有异议，请联系QQ：505417246
+  </view>
+  <van-card wx:for="{{ne_2}}" wx:key="_id"
+    num="1"
+    desc="{{item.array1}}"
+    title="{{item.wupinmiaoshu}}"
+    thumb="{{item.fileList1}}"
+  >
+  </van-card>
+</view>
+  
+
+
+ -->
+ <scroll-view scroll-x class="bg-white nav">
+  <view class="flex text-center">
+    <view class="cu-item flex-sub {{index==TabCur?'text-orange cur':''}}" wx:for="{{navTitle}}" wx:key="index" bindtap="tabSelect" data-id="{{index}}">
+      {{item}}
+    </view>
+  </view>
+</scroll-view>
+
+<view class="cu-list menu-avatar">
+<view class="cu-item {{modalName=='move-box-' + index?'move-cur':''}}" wx:for="{{TabCur == 0 ? ne : (TabCur == 1 ? ne_1: (TabCur == 2 ? ne_2 : ''))}}"   wx:key="index"   bindtouchstart="ListTouchStart" bindtouchmove="ListTouchMove" bindtouchend="ListTouchEnd" data-target="move-box-{{index}}">
+      <view class="cu-avatar round lg" style="background-image:url({{item.fileList1}});"></view>
+      <view class="content">
+        <view class="text-grey">{{item.wupinmiaoshu}}</view>
+        <view class="text-gray text-sm">
+        {{item.faxiandeshijian}}</view>
+      </view>
+      <view class="action" >
+        <view class="text-grey text-xs" style="color:#f00;font-weight:bold;font-size:28rpx">{{item.array1}}</view>
+      </view>
+      <view class="move">
+        <!-- <view class="bg-grey" data-id="{{item._id}}" bindtap="xiugai">修改</view> -->
+        <view class="bg-red" bindtap="shanchu" data-id="{{item._id}}">删除</view>
+      </view>
+    </view>
+</view>
+

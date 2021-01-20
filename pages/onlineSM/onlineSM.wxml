@@ -1,0 +1,7 @@
+<view class="body" bindtap="buy">
+  <image src="cloud://xiaoliu-k8902.7869-xiaoliu-k8902-1301713766/demo/校园海滨.jpg" class="img"></image>
+  <view class="right">
+      <view class="right-top">刘磊磊超市</view>
+      <view class="right-bottom">起送:￥100w</view>
+  </view>
+</view>

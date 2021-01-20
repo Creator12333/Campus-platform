@@ -1,0 +1,18 @@
+<swiper class="card-swiper {{DotStyle?'square-dot':'round-dot'}}" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500" bindchange="cardSwiper" indicator-color="#8799a3" indicator-active-color="#0081ff">
+  <swiper-item wx:for="{{banner}}" wx:key="index" class="{{cardCur==index?'cur':''}}">
+    <view class="swiper-item">
+      <image src="{{item}}" mode="aspectFill"></image>
+    </view>
+  </swiper-item>
+</swiper>
+<view class="cu-list grid col-4 no-border">
+    <view class="cu-item animation-slide-bottom" wx:for="{{iconList}}" wx:key="index" style="animation-delay: 0.{{index}}s;" bindtap="selectList" data-name="{{item.text}}">
+      <image src="{{item.imageUrl}}" mode="aspectFit" class="png"></image>
+      <text style="margin-top:20rpx;font-weight:bold;color:#000">{{item.text}}</text>
+    </view>
+  </view>
+ <!-- <view class="buttom_b">
+    <view class="buttom_view">
+      校园海滨v1.0.6@2020
+    </view>
+  </view> -->

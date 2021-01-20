@@ -1,0 +1,22 @@
+
+.body {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  border-bottom: 1px solid black;
+}
+.img {
+  width: 100rpx;
+  height: 100rpx;
+  margin: 40rpx;
+}
+.right {
+  margin-top: 40rpx;
+  display: flex;
+  flex-direction: column;
+}
+.right-top {
+  padding-bottom: 20rpx;
+  font-weight: 700;
+  font-size: 33rpx;
+}

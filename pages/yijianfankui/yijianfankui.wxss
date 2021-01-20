@@ -1,0 +1,18 @@
+/* pages/yijianfankui/yijianfankui.wxss */
+.text{
+  margin-left: 40rpx;
+  margin-right: 40rpx;
+}
+.ever{
+  margin-top: 50rpx;
+  border: 2px solid seagreen;
+  border-radius: 25rpx;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+}
+.foot{
+  margin-top: 30rpx;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}

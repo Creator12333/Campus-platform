@@ -1,0 +1,72 @@
+/*.body{
+  margin-top: 50rpx;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  height: 1000rpx;
+  border: 3px solid black;
+}
+.demo{
+  margin-top: 20rpx;
+  margin-left: 40rpx;
+  margin-right: 40rpx;
+}
+/*.image{
+  margin-top: 20rpx;
+  margin-left: 200rpx;
+  height: 300rpx;
+  width: 300rpx;
+}*/
+/*.img{
+  margin-left: 200rpx;
+}*/
+page{
+  height: 100%
+}
+.img{
+  /* border: 3px solid black; */
+  width: 100%;
+  height: 500rpx;
+  border-radius: 25rpx;
+  overflow: hidden
+}
+.title{
+ margin-left: 50rpx;
+ margin-top: 30rpx;
+ font-weight: bold
+}
+.price{
+  margin-top: 40rpx;
+  margin-left: 50rpx;
+  font-weight: bold;
+}
+.back{
+  border-radius: 5px;
+  background-color: gainsboro;
+  margin-top: 10rpx;
+  height: 30rpx;
+}
+.phone{
+  margin-top: 20rpx;
+  margin-left: 70rpx;
+}
+.miaoshu{
+  margin-left: 50rpx;
+  margin-top: 30rpx;
+  font-weight:mormal;
+  margin-right: 50rpx;
+}
+.text{
+  border-radius: 16px;
+  border: 4px solid rgb(34, 197, 20);
+  margin-top: 20rpx;
+  margin-left: 50rpx;
+  margin-right: 50rpx;
+  padding: 10rpx;
+  text-align: center
+}
+.see{
+  float: right;
+  color: grey;
+  margin-right: 20rpx;
+  font-size: 28rpx;
+}

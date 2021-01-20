@@ -1,0 +1,107 @@
+.wrapper {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;              
+  height: 80rpx;
+}
+.tab-content {
+  width: 240rpx;
+  height: 76rpx;
+  text-align: center;
+  line-height: 76rpx;
+}
+.select {
+  border-bottom-width: 2rpx;
+  border-bottom-style: solid;
+  border-bottom-color: blue;
+  color: blue;
+}
+.noSelect {
+  color: #666;
+}
+.view1{
+  text-align: center
+}
+.input1{
+  border: 1rpx solid black;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+}
+.view2{
+  text-align: center
+}
+.input2{
+  border: 1rpx solid black;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+}
+.view3{
+  text-align: center
+}
+.input3{
+  border: 1rpx solid black;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+}
+.view4{
+  text-align: center;
+  display: flex;
+  margin-left: 30rpx;
+  margin-top: 30rpx;
+}
+.image{
+  width: 200rpx;
+  height: 200rpx;
+  border: 1px solid black
+}
+.view5{
+  text-align: center
+}
+.textarea{
+  width: 100%;
+  height: 150rpx;
+  border: 1px solid black;
+}
+.view6{
+  text-align: center
+}
+.input6{
+  border: 1px solid black
+}
+.head{
+  background-color: gray;
+  color: white;
+  font-size: 35rpx;
+}
+.picker{
+ text-align: center
+}
+.tip {
+  width: 100%;
+  color: red;
+  font-size: 28rpx;
+  background-color: #e6e6e6;
+}
+.head-shiwuzhaoling{
+  color: yellow;
+  font-size: 35rpx;
+  background-color: grey
+}
+.ppp{
+  display: flex;
+  margin-left: 30rpx;
+  margin-top: 30rpx;
+}
+.text4{
+  margin-top: 80rpx;
+}
+.view-foot{
+   text-align: center;
+  display: flex;
+  margin-left: 30rpx;
+  margin-top: 10rpx;
+  margin-bottom: 30rpx;
+}
+.text-foot{
+  margin-top: 50rpx;
+}

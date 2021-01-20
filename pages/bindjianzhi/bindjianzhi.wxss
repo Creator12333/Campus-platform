@@ -1,0 +1,87 @@
+/* pages/bindjianzhi/bindjianzhi.wxss */
+/*.body{
+  border: 1px solid black;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  margin-top: 30rpx;
+  height: auto ;
+  border-radius: 5px;
+}
+.demo{
+  margin-top: 20rpx;
+  margin-left: 40rpx;
+  margin-right: 40rpx;
+}
+.foot{
+  margin-top: 30rpx;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  border: 1px solid black;
+  border-radius: 5px;
+}*/
+.title{
+  margin-top: 20rpx;
+  margin-left: 40rpx;
+  font-weight: bold;
+  font-size: 50rpx;
+}
+.money{
+  margin-top: 20rpx;
+  margin-left: 40rpx;
+  color: red;
+  font-weight: bold;
+  font-size: 40rpx;
+}
+.work{
+  margin-top: 20rpx;
+  margin-left: 40rpx;
+  font-size: 30rpx;
+}
+.demo{
+  margin-top: 20rpx;
+  margin-left: 30rpx;
+  font-weight: bold;
+}
+.renwu{
+  margin-top: 20rpx;
+  margin-left: 30rpx;
+  border: 5px dashed black;
+  margin-right: 30rpx;
+  text-align: center;
+  padding: 5rpx;
+}
+.demo1{
+  margin-top: 20rpx;
+  margin-left: 30rpx;
+  font-weight: bold;
+}
+.demo3{
+  margin-top: 40rpx;
+  margin-left: 30rpx;
+  font-weight: bold;
+}
+.demo4{
+  margin-top: 20rpx;
+  margin-left: 30rpx;
+  font-weight: bold;
+}
+.time{
+  margin-top: 20rpx;
+  margin-left: 30rpx;
+  font-size: 30rpx;
+}
+.where{
+   margin-top: 20rpx;
+  margin-left: 30rpx;
+  font-size: 30rpx;
+}
+.phone{
+  margin-top: 20rpx;
+  margin-left: 30rpx;
+  font-size: 30rpx;
+}
+.see{
+  float: right;
+  color:  grey;
+  margin-right: 20rpx;
+}

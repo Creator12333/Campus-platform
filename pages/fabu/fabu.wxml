@@ -1,0 +1,248 @@
+ <scroll-view scroll-x class="bg-white nav">
+  <view class="flex text-center">
+    <view class="cu-item flex-sub {{index==TabCur?'text-orange cur':''}}" wx:for="{{navTitle}}" wx:key="index" bindtap="tabSelect" data-id="{{index}}">
+      {{item}}
+    </view>
+  </view>
+</scroll-view>
+<!--闲置物品-->
+<view wx:if="{{TabCur == 0}}">
+	<view class="cu-form-group">
+		<view class="title">物品名称</view>
+		<input placeholder="如：华为P30" value="{{name}}" bindinput="getName"></input>
+	</view>
+  <view class="cu-form-group">
+		<view class="title">新旧程度</view>
+		<input placeholder="如：全新/二手" value="{{new1}}" bindinput="getNew"></input>
+	</view>
+  <view class="cu-form-group">
+		<view class="title">最低价格</view>
+		<input placeholder="如：3000元" value="{{jiage}}" bindinput="getJiaGe"></input>
+	</view>
+	<view class="cu-form-group">
+		<view class="title">物品所属类型</view>
+		<picker bindchange="bindPickerChange" value="{{index}}" range="{{picker}}">
+			<view class="picker">
+				{{picker[index]}}
+			</view>
+		</picker>
+	</view>
+	<view class="cu-bar bg-white margin-top">
+		<view class="action">
+			图片上传
+		</view>
+		<view class="action">
+			{{imgList.length}}/4
+		</view>
+	</view>
+	<view class="cu-form-group">
+		<view class="grid col-4 grid-square flex-sub">
+			<view class="bg-img" wx:for="{{imgList}}" wx:key="{{index}}" bindtap="ViewImage" data-url="{{imgList[index]}}">
+				<image src='{{imgList[index]}}' mode='aspectFill'></image>
+				<view class="cu-tag bg-red" catchtap="delete" data-id="{{index}}" data-src="{{item}}">
+					<text class="cuIcon-close"></text>
+				</view>
+			</view>
+			<view class="solids" bindtap="upload_img" wx:if="{{imgList.length<4}}">
+				<text class="cuIcon-cameraadd"></text>
+			</view>
+		</view>
+  </view>
+  
+  <view class="cu-bar bg-white margin-top">
+		<view class="action">
+			收款二维码上传
+		</view>
+		<view class="action">
+			{{img_pay.length}}/4
+		</view>
+	</view>
+	<view class="cu-form-group">
+		<view class="grid col-4 grid-square flex-sub">
+			<view class="bg-img" wx:for="{{img_pay}}" wx:key="{{index}}" bindtap="ViewImage" data-url="{{img_pay[index]}}">
+				<image src='{{img_pay[index]}}' mode='aspectFill'></image>
+				<view class="cu-tag bg-red" catchtap="delete_pay" data-id="{{index}}" data-src="{{item}}">
+					<text class="cuIcon-close"></text>
+				</view>
+			</view>
+			<view class="solids" bindtap="upPayCode" wx:if="{{img_pay.length<4}}">
+				<text class="cuIcon-cameraadd"></text>
+			</view>
+		</view>
+  </view>
+  
+  <view class="cu-form-group margin-top">
+		<view class="title">物品描述</view>
+		<input placeholder="如：全新，成色好，包装没有打开" value="{{miaoshu}}" bindinput="getMiaoShu"></input>
+	</view>
+
+  <view class="cu-form-group">
+		<view class="title">联系方式</view>
+		<input placeholder="如：QQ:505417246" value="{{lianxifangshi}}" bindinput="getLianXiFangShi"></input>
+  </view>
+  
+  <button bindtap="fabu" style="width:80%;margin-top:30rpx" type="primary">确定发布</button>
+  <modal hidden="{{hidden}}" title="注意" confirm-text="确定" bindcancel="cancel" bindconfirm="confirm">
+    请确定您填写的内容是否完整，本平台暂时不支持在线支付功能，对您发布的物品感兴趣的同学会根据您发布的联系方式联系你，请确保联系方式正确
+</modal>
+</view>
+
+<!-- 兼职 -->
+<view wx:if="{{TabCur == 1}}">
+	<view class="cu-form-group">
+		<view class="title">工作名称</view>
+		<input placeholder="如：家教老师" value="{{gongzuomingcheng}}" bindinput="gongzuomingcheng"></input>
+	</view>
+  <view class="cu-form-group">
+		<view class="title">工作时间</view>
+		<input placeholder="如：9月1日-10月1日" value="{{gongzuoshijian}}" bindinput="gongzuoshijian"></input>
+	</view>
+  <view class="cu-form-group">
+		<view class="title">工作地点</view>
+		<input placeholder="如：海滨学院东门小吃街" value="{{gongzuodidian}}" bindinput="gongzuodidian"></input>
+	</view>
+  <view class="cu-form-group">
+		<view class="title">人员要求</view>
+		<input placeholder="如：只限男生" value="{{renyuanyaoqiu}}" bindinput="renyuanyaoqiu"></input>
+	</view>
+
+  <view class="cu-form-group">
+		<view class="title">薪资福利</view>
+		<input placeholder="如：2000元/月 100元/天 10元/小时" value="{{xinzifuli}}" bindinput="xinzifuli"></input>
+  </view>
+
+  <view class="cu-form-group">
+		<view class="title">联系方式</view>
+		<input placeholder="如：电话/QQ/微信" value="{{lianxifangshi1}}" bindinput="lianxifangshi1"></input>
+  </view>
+
+  <view class="cu-form-group">
+		<view class="title">职位描述</view>
+		<input placeholder="如：在校内发传单" value="{{zhiweimiaoshu}}" bindinput="zhiweimiaoshu"></input>
+  </view>
+  
+  <button bindtap="jianzhifabu" style="width:80%;margin-top:30rpx" type="primary">确定发布</button>
+  <modal hidden="{{hidden1}}" title="注意" confirm-text="确定" bindcancel="cancel1" bindconfirm="confirm1">
+  本兼职发布功能仅支持海滨学院内师生及周边场所使用，请确保您发布的兼职的真实性，如果有人举报，轻者将全校通报，严重者交给公安局处理，请谨慎发布！
+  </modal>
+</view>
+
+<!-- 失物招领 -->
+<view wx:if="{{TabCur == 2}}">
+	<view class="cu-form-group">
+		<view class="title">物品描述</view>
+		<input placeholder="如：一部苹果手机" value="{{wupinmiaoshu}}" bindinput="wupinmiaoshu"></input>
+	</view>
+	<view class="cu-form-group">
+		<view class="title">发现地点</view>
+		<picker bindchange="bindPickerLost" value="{{index1}}" range="{{picker1}}">
+			<view class="picker">
+				{{picker1[index1]}}
+			</view>
+		</picker>
+	</view>
+  <view class="cu-form-group">
+		<view class="title">发现时间</view>
+		<input placeholder="如：2020/5/5 下午四点左右" value="{{faxiandeshijian}}" bindinput="faxiandeshijian"></input>
+	</view>
+  <view class="cu-form-group">
+		<view class="title">联系方式</view>
+		<input placeholder="如：电话/微信/QQ" value="{{lianxifangshi2}}" bindinput="lianxifangshi2"></input>
+  </view>
+  <view class="cu-bar bg-white margin-top">
+		<view class="action">
+			图片上传
+		</view>
+		<view class="action">
+			{{imgList_Lost.length}}/4
+		</view>
+	</view>
+	<view class="cu-form-group">
+		<view class="grid col-4 grid-square flex-sub">
+			<view class="bg-img" wx:for="{{imgList_Lost}}" wx:key="{{index}}" bindtap="ViewImage" data-url="{{imgList_Lost[index]}}">
+				<image src='{{imgList_Lost[index]}}' mode='aspectFill'></image>
+				<view class="cu-tag bg-red" catchtap="delete_lost" data-id="{{index}}" data-src="{{item}}">
+					<text class="cuIcon-close"></text>
+				</view>
+			</view>
+			<view class="solids" bindtap="bindImage" wx:if="{{imgList_Lost.length<4}}">
+				<text class="cuIcon-cameraadd"></text>
+			</view>
+		</view>
+  </view>
+  <button bindtap="shiwuzhaolingfabu" style="width:80%;margin-top:30rpx" type="primary">确定发布</button>
+  <modal hidden="{{hidden2}}" title="注意" confirm-text="确定" bindcancel="cancel2" bindconfirm="confirm2">
+感谢您的发布！丢失者会根据您发布的联系方式联系您，请确保您填写的联系方式正确，注明是QQ、微信还是电话
+</modal>
+</view>
+
+<!-- 代取快递 -->
+<view wx:if="{{TabCur == 3}}">
+  <scroll-view scroll-x class="bg-white nav">
+  <view class="flex text-center">
+    <view class="cu-item flex-sub {{index==TabCur_item?'text-orange cur':''}}" wx:for="{{navTitle_item}}" wx:key="index" bindtap="tabSelect_item" data-id="{{index}}">
+      {{item}}
+    </view>
+  </view>
+</scroll-view>
+<view wx:if="{{TabCur_item == 0}}">
+	<view class="cu-form-group">
+		<view class="title">快递类型</view>
+		<picker bindchange="PickerChangeExpress" value="{{index2}}" range="{{picker2}}">
+			<view class="picker">
+				{{picker2[index2]}}
+			</view>
+		</picker>
+  </view>
+
+  <view class="cu-form-group">
+		<view class="title">送达地点</view>
+		<input placeholder="如：15号楼B105(男)" value="{{ExpressAddress}}" bindinput="ExpressReceiveAddress"></input>
+  </view>
+
+  <view class="cu-form-group">
+		<view class="title">送达时间</view>
+		<input placeholder="如：2020/10/22 下午6点前" value="{{ExpressTime}}" bindinput="ExpressTime"></input>
+  </view>
+  
+  <view class="cu-form-group">
+		<view class="title">悬赏金额(元)</view>
+		<input placeholder="如：2" value="{{ExpressMoney}}" bindinput="ExpressMoney"></input>
+  </view>
+  
+  <view class="cu-form-group">
+		<view class="title">QQ</view>
+		<input placeholder="如：505417246" value="{{ExpressQQ}}" bindinput="ExpressQQ"></input>
+  </view>
+
+  <view class="cu-form-group">
+		<view class="title">手机号</view>
+		<input placeholder="如：18331092918" value="{{ExpressPhone}}" bindinput="ExpressPhone"></input>
+  </view>
+
+  <button type="primary" style="width:80%;margin-top:30rpx" bindtap="ExpressSubmit">立即发布</button>
+</view>
+<view wx:if="{{TabCur_item == 1}}">
+  <view class="cu-form-group">
+		<view class="title">任务内容</view>
+		<input placeholder="如：求大神辅导Java！" value="{{TaskContent}}" bindinput="otherTaskContent"></input>
+  </view>
+
+  <view class="cu-form-group">
+		<view class="title">悬赏金额(元)</view>
+		<input placeholder="如：50" value="{{TaskMoney}}" bindinput="otherTaskMoney"></input>
+  </view>
+
+  <view class="cu-form-group">
+		<view class="title">QQ</view>
+		<input placeholder="如：505417246" value="{{TaskQQ}}" bindinput="otherTaskQQ"></input>
+  </view>
+
+  <view class="cu-form-group">
+		<view class="title">手机号</view>
+		<input placeholder="如：18331092918" value="{{TaskPhone}}" bindinput="otherTaskPhone"></input>
+  </view>
+
+  <button type="primary" style="width:80%;margin-top:30rpx;" bindtap="otherTaskSubmit">立即发布</button>
+</view>
+</view>

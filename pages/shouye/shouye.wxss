@@ -1,0 +1,78 @@
+/* pages/shouye/shouye.wxss */
+page{
+    background-color: #f3f3f3;
+}
+.dingbu{
+  margin-left: 30rpx;
+  text-align: center;
+  font-size: 90%;
+  background-color: grey
+}
+.head{
+  height: 300rpx;
+  margin-top: 10rpx;
+  background-color: red;
+}
+.body{
+  background-color: blue;
+  margin-top: 50rpx;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  width: 100%;
+  height: 300rpx
+}
+.foot{
+  background-color: green;
+  margin-top: 50rpx;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  width: 100%;
+  height: 300rpx
+}
+.text{
+  margin-top: 66rpx;
+  margin-left: 40rpx;
+  margin-right: 40rpx;
+  font-size: 15px;
+  border: 2px solid rgb(34, 197, 20);
+  border-radius: 16rpx;
+  padding: 15rpx;
+}
+.guanggao{
+  border: 1px solid black;
+  position: fixed;
+  left: 350rpx;
+  top: 800rpx;
+}
+.auto-img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.swiper{
+  overflow: hidden
+}
+.buttom_view{ 
+  position: fixed;
+  text-align: center;
+  font-size: 0.8rem;
+  color:rgb(187, 186, 186);
+  bottom: 30rpx;
+  left: 0;
+  right: 0;
+  padding-bottom: 5px;
+  border-bottom: #ddd 1px solid;
+}
+.wenJuan {
+  width: 100%;
+  background-color: #fff;
+  margin-top: 30rpx;
+  padding: 20rpx 30rpx;
+  text-align: center;
+}
+
+.png {
+  width: 60rpx;
+  height: 60rpx;
+  margin: 0 auto;
+}

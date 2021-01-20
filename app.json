@@ -1,0 +1,69 @@
+{
+  "pages": [
+    "pages/demo/demo",
+    "pages/shouye/shouye",
+    "pages/mine/mine",
+    "pages/fabu/fabu",
+    "pages/buying/buying",
+    "pages/shiwuzhaoling/shiwuzhaoling",
+    "pages/jianzhi/jianzhi",
+    "pages/showBuying/showBuying",
+    "pages/tuiguanghezuo/tuiguanghezuo",
+    "pages/yijianfankui/yijianfankui",
+    "pages/bindjianzhi/bindjianzhi",
+    "pages/seeShowing/seeShowing",
+    "pages/seeHelp/seeHelp",
+    "pages/guanyu/guanyu",
+    "pages/showLost/showLost",
+    "pages/seeJianZhi/seeJianZhi",
+    "pages/seeLost/seeLost",
+    "pages/changeShop/changeShop",
+    "pages/changeJianZhi/changeJianZhi",
+    "pages/changeLost/changeLost",
+    "pages/seeImg/seeImg",
+    "pages/shenhe1/shenhe1",
+    "pages/shenhe2/shenhe2",
+    "pages/shenhe3/shenhe3",
+    "pages/hubanghuzhu/hubanghuzhu",
+    "pages/jiaoliu/jiaoliu",
+    "pages/goPay/goPay",
+    "pages/seeUp/seeUp",
+    "pages/shenhe/shenhe",
+    "pages/test/test",
+    "pages/daiqukuaidi/daiqukuaidi",
+    "pages/seeTask/seeTask",
+    "pages/shenhe4/shenhe4",
+    "pages/zhuanPan/zhuanPan"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "校园海滨",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "text": "首页",
+        "pagePath": "pages/shouye/shouye",
+        "iconPath": "pages/img/home.png",
+        "selectedIconPath": "pages/img/home.fill.png"
+      },
+      {
+        "text": "发布",
+        "pagePath": "pages/fabu/fabu",
+        "iconPath": "pages/img/fabu.png",
+        "selectedIconPath": "pages/img/fabu.fill.png"
+      },
+      {
+        "text": "我的",
+        "pagePath": "pages/mine/mine",
+        "iconPath": "pages/img/mine.png",
+        "selectedIconPath": "pages/img/mine.fill.png"
+      }
+    ],
+    "color": "#000000",
+    "selectedColor": "#1E68C9"
+  },
+  "sitemapLocation": "sitemap.json"
+}

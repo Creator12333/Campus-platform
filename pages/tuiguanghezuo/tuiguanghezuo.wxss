@@ -1,0 +1,18 @@
+.text{
+  
+}
+.body{
+  border: 2px solid seagreen;
+  border-radius: 16rpx;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  margin-top: 50rpx; 
+  padding: 10rpx;
+  text-align: center
+}
+.foot{
+  margin-top: 30rpx;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}

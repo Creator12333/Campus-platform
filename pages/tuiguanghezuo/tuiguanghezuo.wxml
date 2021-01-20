@@ -1,0 +1,12 @@
+<view class="body">
+<text class="text">感谢您对本产品的支持\n
+若想推广合作，通过本程序发布广告\n
+可以联系\n
+QQ：505417246\n
+微信：18331092918\n
+</text>
+</view>
+<view class="foot">
+  <button bindtap="get_QQ" type="primary">复制QQ</button>
+  <button bindtap="get_WeChat">复制微信</button>
+</view>

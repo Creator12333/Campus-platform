@@ -1,0 +1,3 @@
+<view class="body">
+<image src="{{imgUrl}}" class="img" mode="aspectFit"></image>
+</view>

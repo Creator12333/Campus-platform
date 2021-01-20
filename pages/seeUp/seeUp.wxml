@@ -1,0 +1,4 @@
+<button type="primary" bindtap="seeThing" style="width:60%">二手闲置</button>
+<button type="primary" bindtap="seeJianZhi" style="width:60%">兼职</button>
+<button type="primary" bindtap="seeLost" style="width:60%">失物招领</button>
+<button type="primary" bindtap="seeTask" style="width:60%">任务</button>

@@ -1,0 +1,12 @@
+<!-- <van-panel wx:for="{{ne}}" wx:key="index" title="{{item.gongzuomingcheng}}" desc="{{item.zhiweimiaoshu}}" status="{{item.xinzifuli}}" bindtap="bindjianzhi" id="{{item._id}}">
+</van-panel> -->
+<!-- 工作名称、职位描述、薪资福利、 -->
+<view class="body" wx:for="{{ne}}">
+  <view class="body_1">
+    <text style="font-weight:bold">{{item.gongzuomingcheng}}</text>
+    <text style="color:#f00">{{item.xinzifuli}}</text>
+  </view>
+  <view class="body_2">
+    {{item.zhiweimiaoshu}}
+  </view>
+</view>

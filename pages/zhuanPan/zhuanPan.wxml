@@ -1,0 +1,30 @@
+<view class="text">
+  这顿吃什么?
+</view>
+
+<view class="container">
+  <view class="plate-wrap-box">
+    <view class="plate-border" animation="{{ aniData }}">
+      <!-- 转盘以及文字 -->
+      <view class="plate-wrap">
+        <view class="plate-box" wx:for="{{ lottery }}" wx:key="index" style="top:-{{ (lottery.length - 6)<=2?(36+4*(lottery.length - 6)):50 }}rpx;transform-origin: 50% {{ (lottery.length - 6) <=2?(256+4*(lottery.length - 6)):270 }}rpx;border-top: {{ (lottery.length - 6) <=2?(256+4*(lottery.length - 6)):270 }}rpx solid #{{ index % 2==0?'1f0193':'22a7ca' }};transform:translate(-50%,0) rotate({{ 360 / lottery.length * ( index )}}deg);border-left: {{ 440 / lottery.length * 2 }}rpx solid transparent;border-right: {{ 440 / lottery.length * 2 }}rpx solid transparent;">
+          <text class="text-box" style="color:#{{ index % 2==0?'fcff0c':'fcff0c' }};font-size:24rpx">{{ item }}</text>
+        </view>
+      </view>
+      <!-- 边框的小灯泡 -->
+      <!-- <view class="plate-wrap plate-light">
+        <view class="plate-box" wx:for="{{ lottery }}" wx:key="" style="top:-{{ (lottery.length - 6)<=2?(44+4*(lottery.length - 6)):60 }}rpx; transform-origin: 50% {{ (lottery.length - 6) <=2?(294+4*(lottery.length - 6)):310 }}rpx;border-top: {{ (lottery.length - 6) <=2?(294+4*(lottery.length - 6)):310 }}rpx solid transparent;transform:translate(-50%,0) rotate({{ 360 / lottery.length * ( index )}}deg);border-left: {{ 500 / lottery.length * 2 }}rpx solid transparent;border-right: {{ 500 / lottery.length * 2 }}rpx solid transparent;">
+          <view class="bulb"></view>
+        </view>
+      </view> -->
+    </view>
+    <view class="plate-btn-wrap" bindtap="startRollTap">
+      <view class="plate-btn-box">
+        <view class="plate-inner-btn">
+          <text>GO</text>
+        </view>
+      </view>
+    </view>
+ 
+  </view>
+</view>

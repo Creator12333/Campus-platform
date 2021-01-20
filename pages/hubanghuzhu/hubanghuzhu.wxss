@@ -1,0 +1,32 @@
+/* pages/hubanghuzhu/hubanghuzhu.wxss */
+page{
+  background-color: #f3f3f3;
+}
+.demo{
+  margin-left: 50rpx;
+}
+.body{
+  margin-top: 50rpx;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.body-1{
+  flex:0 0 auto;
+  width: 30%;
+  height: 200rpx;
+  text-align: center;
+  color: #797979;
+  line-height: 200rpx;
+  font-size: 30rpx;
+  border: 1px solid black;
+  margin: 10rpx;
+}
+.body-1:hover{
+  background-color:#48D1CC;
+  color: white;
+  box-shadow: 5rpx 5rpx 5rpx 5rpx #ccc;
+}

@@ -1,0 +1,7 @@
+<view class="text">请确认您已经和发布者沟通好了此物品交易的相关问题，已经确定无误的前提下，可通过下方发布者提供的收款二维码，向他支付此物品的钱款!!!</view>
+<view class="img" wx:if="{{demo}}">
+<image src="{{payCode}}" mode="aspectFit"></image>
+</view>
+<view wx:else class="foot">
+  发布者未提供收款码
+</view>

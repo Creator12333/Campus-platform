@@ -1,0 +1,5 @@
+/* pages/guanyu/guanyu.wxss */
+.body{
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+}

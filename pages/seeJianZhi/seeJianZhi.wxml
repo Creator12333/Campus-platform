@@ -1,0 +1,64 @@
+<!-- <view class='box'>
+  <view class='wrapper'>
+    <view class="tab-content {{postFaBu ? 'select' : 'noSelect'}}" bindtap='chooseFaBu'>已发布</view>
+    <view class="tab-content {{postShenHeZhong ? 'select' : 'noSelect'}}" bindtap='chooseShenHeZhong'>审核中</view>
+    <view class="tab-content {{postShenHeShiBai ? 'select' : 'noSelect'}}" bindtap="chooseShenHeShiBai">审核失败</view>
+  </view>
+</view>
+
+<view wx:if="{{postFaBu}}">
+<van-panel wx:for="{{ne}}" wx:key="_id" title="{{item.gongzuomingcheng}}" desc="{{item.lianxifangshi1}}" status="{{item.xinzifuli}}" use-footer-slot>
+  <view>{{item.zhiweimiaoshu}}</view>
+  <view slot="footer">
+    <van-button size="small" bindtap="xiugai1" id="{{item._id}}">修改</van-button>
+    <van-button size="small" type="danger" bindtap="shanchu1" id="{{item._id}}">删除</van-button>
+  </view>
+</van-panel>
+</view>
+
+<view wx:if="{{postShenHeZhong}}">
+<van-panel wx:for="{{ne_1}}" wx:key="_id" title="{{item.gongzuomingcheng}}" desc="{{item.lianxifangshi1}}" status="{{item.xinzifuli}}" use-footer-slot>
+  <view>{{item.zhiweimiaoshu}}</view>
+</van-panel>
+</view>
+
+<view wx:if="{{postShenHeShiBai}}">
+  <view class="text">
+    您发布的以下内容违反本平台相关规定，禁止发布，如有异议，请联系QQ：505417246
+  </view>
+<van-panel wx:for="{{ne_2}}" wx:key="_id" title="{{item.gongzuomingcheng}}" desc="{{item.lianxifangshi1}}" status="{{item.xinzifuli}}" use-footer-slot>
+  <view>{{item.zhiweimiaoshu}}</view>
+</van-panel>
+</view>
+
+
+
+ -->
+
+ <scroll-view scroll-x class="bg-white nav">
+  <view class="flex text-center">
+    <view class="cu-item flex-sub {{index==TabCur?'text-orange cur':''}}" wx:for="{{navTitle}}" wx:key="index" bindtap="tabSelect" data-id="{{index}}">
+      {{item}}
+    </view>
+  </view>
+</scroll-view>
+
+<view class="cu-list menu-avatar">
+<view class="cu-item {{modalName=='move-box-' + index?'move-cur':''}}" wx:for="{{TabCur == 0 ? ne : (TabCur == 1 ? ne_1: (TabCur == 2 ? ne_2 : ''))}}"   wx:key="index"   bindtouchstart="ListTouchStart" bindtouchmove="ListTouchMove" bindtouchend="ListTouchEnd" data-target="move-box-{{index}}" style="position: relative">
+      <!-- <view class="cu-avatar round lg" style="background-image:url({{item.fileList}});"></view> -->
+      <view class="content" style="position: absolute;left:30rpx">
+        <view class="text-grey">{{item.gongzuomingcheng}}</view>
+        <view class="text-gray text-sm">
+        {{item.zhiweimiaoshu}}</view>
+      </view>
+      <view class="action" style="width:200rpx">
+        <view class="text-grey text-xs" style="color:#f00;font-weight:bold;font-size:28rpx">￥{{item.xinzifuli}}</view>
+        <!-- <view class="cu-tag round bg-grey sm">5</view> -->
+      </view>
+      <view class="move">
+        <!-- <view class="bg-grey" data-id="{{item._id}}" bindtap="xiugai1">修改</view> -->
+        <view class="bg-red" bindtap="shanchu1" data-id="{{item._id}}">删除</view>
+      </view>
+    </view>
+</view>
+

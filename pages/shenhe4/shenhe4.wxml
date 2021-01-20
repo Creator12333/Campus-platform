@@ -1,0 +1,41 @@
+<view class="title">
+  <text class="{{select == '代取快递' ? 'select' : ''}}" bindtap="select" data-id="代取快递">代取快递</text>
+  <text class="{{select == '其它任务' ? 'select' : ''}}" bindtap="select" data-id="其它任务">其它任务</text>
+</view>
+<view class="content" wx:if="{{select == '代取快递'}}" wx:for="{{Express}}">
+  <view class="content-top">
+    <view class="content-top-left">
+      <text class="name">代取快递</text>
+      <text class="time">{{item.timeNow}}</text>
+    </view>
+    <text>￥{{item.Money}}</text>
+  </view>
+  <view class="content-bottom">
+    <view class="text">
+    <text>{{item.ExpressAddress}}</text>
+    <text>{{item.ExpressTime}}</text>
+  </view>
+  <view class="button">
+    <button type="primary" size="mini" data-id="{{item._id}}" bindtap="ok">通过</button>
+    <button style="background-color:red;color:#fff" size="mini" data-id="{{item._id}}" bindtap="no">不通过</button>
+  </view>
+  </view>
+</view>
+<view class="content" wx:if="{{select == '其它任务'}}" wx:for="{{Task}}">
+  <view class="content-top">
+    <view class="content-top-left">
+      <text class="name">其它任务</text>
+      <text class="time">{{item.timeNow}}</text>
+    </view>
+    <text>￥{{item.Money}}</text>
+  </view>
+  <view class="content-bottom">
+    <view class="text">
+    <text>{{item.TaskContent}}</text>
+  </view>
+  <view class="button">
+    <button type="primary" size="mini" bindtap="ok" data-id="{{item._id}}">通过</button>
+    <button style="background-color:red;color:#fff" size="mini" bindtap="no" data-id="{{item._id}}">不通过</button>
+  </view>
+  </view>
+</view>

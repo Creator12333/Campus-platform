@@ -1,0 +1,15 @@
+/* pages/seeHelp/seeHelp.wxss */
+.body{
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+}
+.body > text {
+  background-color: #f3f3f3;
+  width: 90%;
+  margin: 0 auto;
+  display: inline-block;
+  margin-top: 20rpx; 
+  padding: 20rpx;
+  border-radius: 40rpx;
+  /* margin-right: 20rpx; */
+}

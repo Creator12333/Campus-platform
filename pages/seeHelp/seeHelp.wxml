@@ -1,0 +1,127 @@
+<!-- pages/seeHelp/seeHelp.wxml
+<view class="body">
+<text>2020年11月1日
+1.增加代取快递板块
+2.修复已知BUG
+3.优化界面
+</text>
+<text>2020年8月31日更新1.0.6版本
+1.全面优化UI界面及交互体验
+2.增加交流群功能
+3.修复已知BUG
+</text>
+<text>2020年6月21日更新1.0.5版本
+1.优化UI界面，在商品详情页增加复制联系方式功能
+2.闲置发布中添加收款码功能供用户选择
+3.修复已知BUG
+</text>
+<text>2020年4月29日更新1.0.4版本
+1.优化Ui界面
+2.优化代码
+3.修复已经BUG
+</text>
+<text>2020年4月13日更新1.0.3版本
+1.优化UI界面
+2.增加授权登录功能，并显示用户的微信昵称和头像
+</text>
+<text>2020月4月3日更新1.0.2版本
+1.增加查看闲置和失物招领里图片可以点击全图查看的功能
+2.修复查看兼职的页面，文字溢出边框的bug
+3.修复失物招领页，图片无法显示的bug
+4.修复查看闲置页面图片变形的bug
+5.修复发布功能中图片只能上传第一张到数据库的bug
+6.更新首页的logo
+7.新增管理员端用于审核用户发布的信息
+8.添加审核机制，用户发布后，需要通过管理员审核，才能显示到平台上
+9.优化展示页的UI
+</text>
+<text>2020月4月2日更新1.0.1版本
+修复三个用户反馈的已知bug
+</text>
+<text>2020月4月1日首次发布上线1.0.0测试版本</text>
+</view> -->
+<view class="cu-timeline">
+  <view class="cu-time">版本更新</view>
+  <view class="cu-item text-blue">
+    <view class="bg-blue content">
+      <text>2020年11月27日
+      1.全面重构优化逻辑代码
+      2.全面重构页面UI
+      3.修复已知BUG
+      </text>
+    </view>
+  </view>
+  <view class="cu-item text-green">
+    <view class="content bg-green shadow-blur">
+      <text>2020年11月1日
+      1.增加代取快递板块
+      2.修复已知BUG
+      3.优化界面
+      </text>
+    </view>
+  </view>
+  <view class="cu-item text-red">
+    <view class="content bg-red shadow-blur">
+      <text>2020年8月31日
+      1.全面优化UI界面及交互体验
+      2.增加交流群功能
+      3.修复已知BUG
+      </text>
+    </view>
+  </view>
+  <view class="cu-item text-blue">
+    <view class="bg-blue content">
+      <text>2020年6月21日
+    1.优化UI界面，在商品详情页增加复制联系方式功能
+    2.闲置发布中添加收款码功能供用户选择
+    3.修复已知BUG
+    </text>
+    </view>
+  </view>
+  
+  <view class="cu-item text-green">
+    <view class="content bg-green shadow-blur">
+      <text>2020年4月29日
+      1.优化Ui界面
+      2.优化代码
+      3.修复已经BUG
+      </text>
+    </view>
+  </view>
+  <view class="cu-item text-red">
+    <view class="content bg-red shadow-blur">
+      <text>2020年4月13日
+      1.优化UI界面
+      2.增加授权登录功能，并显示用户的微信昵称和头像
+      </text>
+    </view>
+  </view>
+  <view class="cu-item text-blue">
+    <view class="bg-blue content">
+      <text>2020月4月3日
+      1.增加查看闲置和失物招领里图片可以点击全图查看的功能
+      2.修复查看兼职的页面，文字溢出边框的bug
+      3.修复失物招领页，图片无法显示的bug
+      4.修复查看闲置页面图片变形的bug
+      5.修复发布功能中图片只能上传第一张到数据库的bug
+      6.更新首页的logo
+      7.新增管理员端用于审核用户发布的信息
+      8.添加审核机制，用户发布后，需要通过管理员审核，才能显示到平台上
+      9.优化展示页的UI
+      </text>
+    </view>
+  </view>
+
+  <view class="cu-item text-green">
+    <view class="content bg-green shadow-blur">
+      <text>2020月4月2日更新1.0.1版本
+      修复三个用户反馈的已知bug
+      </text>
+    </view>
+  </view>
+  <view class="cu-item text-red">
+    <view class="content bg-red shadow-blur">
+      <text>2020月4月1日首次发布上线1.0.0测试版本</text>
+    </view>
+  </view>
+</view>

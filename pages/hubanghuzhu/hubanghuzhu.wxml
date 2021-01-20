@@ -1,0 +1,13 @@
+<!-- pages/hubanghuzhu/hubanghuzhu.wxml
+<text class="demo">功能待开发</text> -->
+<view class="body">
+<view class="body-1" bindtap="goHuZhu">考试相关</view>
+<view class="body-1" bindtap="goHuZhu">视频会员</view>
+<view class="body-1" bindtap="goHuZhu">资源分享</view>
+<view class="body-1" bindtap="goHuZhu">学校相关</view>
+<view class="body-1" bindtap="goHuZhu">游戏相关</view>
+<view class="body-1" bindtap="goHuZhu">校园跑腿</view>
+<view class="body-1" bindtap="goHuZhu">网课代刷</view>
+<view class="body-1" bindtap="goHuZhu">交流群</view>
+<view class="body-1" bindtap="goHuZhu">其它</view>
+</view>

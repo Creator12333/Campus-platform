@@ -1,0 +1,46 @@
+/* pages/jiaoliu/jiaoliu.wxss */
+.demo{
+  margin-left: 50rpx;
+}
+.head{
+  margin-top: 28rpx;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  align-self: center;
+}
+.body{
+  display: flex;
+  flex-direction: row;
+  padding-left: 50rpx;
+  padding-right: 50rpx;
+  margin-top: 35rpx;
+  width: 100%;
+}
+.left{
+  display: flex;
+  flex-direction: row;
+  width: 60%;
+}
+.left-left{
+}
+.left-right{
+  display: flex;
+  flex-direction: column;
+  padding-left: 15rpx;
+  padding-top: 35rpx;
+}
+.left-right-1{
+}
+.left-right-2{
+
+}
+.right-button{
+  padding-top: 40rpx;
+}
+
+.img{
+  padding-top: 20rpx;
+  width: 100rpx;
+  height: 100rpx;
+}

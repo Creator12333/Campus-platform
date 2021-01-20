@@ -1,0 +1,53 @@
+<van-cell-group>
+  <van-field
+    value="{{ne.name}}"
+    clearable
+    label="物品名称"
+    placeholder="如：华为P30"
+    bind:change="getName"
+  />
+  <van-field
+    value="{{ne.new1}}"
+    label="新旧程度"
+    placeholder="如：全新、二手"
+    bind:input="getNew"
+    clearable
+  />
+   <van-field
+    value="{{ne.jiage}}"
+    label="价格"
+    placeholder="如：2000元"
+    bind:input="getJiaGe"
+    clearable
+  />
+  <view class="ppp">
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+  <view class="picker">物品所属类型:->->{{array[index]}}</view>
+  <view></view>
+  </picker>
+  </view>
+  <view class="view4" bindtap="bindThingImageInput">
+  <text class="text4">发布物品的图片:->-></text>
+  <image src="{{thingImage}}" mode="aspectFit" class="image"></image>
+  </view>
+  <view class="view4" bindtap="bindPayCode">
+  <text class="text4">上传收款二维码：->-></text>
+  <image src="{{payCode}}" mode="aspectFit" class="image"></image>
+  </view>
+  <van-field
+    value="{{ne.miaoshu}}"
+    label="物品描述"
+    type="textarea"
+    placeholder="如：全新的，成色好，包装没有打开过"
+    autosize
+    clearable
+    bind:input="getMiaoShu"
+  />
+  <van-field
+    value="{{ne.lianxifangshi}}"
+    clearable
+    label="联系方式"
+    placeholder="如：QQ：505417246"
+    bind:change="getLianXiFangShi"/>
+</van-cell-group>
+<button type="primary" style="width:70%" bindtap="fabu">确定更改</button>

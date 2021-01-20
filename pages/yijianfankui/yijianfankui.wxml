@@ -1,0 +1,10 @@
+<view class="ever">
+<view class="text">感谢您对本产品的支持</view>
+<view class="text">您的每一个宝贵意见都会使本产品更加完善</view>
+<view class="text">如果您发现了本产品的bug，一些明显缺陷，或者您感觉本产品应该添加哪些功能才会使您日常更加方便</view>
+<view class="text">请联系QQ:505417246,微信：18331092918</view>
+</view>
+<view class="foot">
+  <button bindtap="get_QQ" type="primary">复制QQ</button>
+  <button bindtap="get_WeChat">复制微信</button>
+</view>

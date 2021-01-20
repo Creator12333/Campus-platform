@@ -1,0 +1,84 @@
+<view class="body">
+  <view class="title">
+    <text class="{{title_select == 1 ? 'select' : ''}}" bindtap="title_select" data-id="1">代取快递</text>
+    <text class="{{title_select == 2 ? 'select' : ''}}" bindtap="title_select" data-id="2">其它任务</text>
+  </view> 
+  <!-- 代取快递 -->
+  <view class="content" wx:if="{{title_select == 1}}" wx:for="{{Express}}" wx:key="index">
+    <view class="content-top">
+      <image src="{{item.avatarUrl}}"></image>
+      <view class="content-top-text">
+        <text class="name">{{item.nickName}}</text>
+        <text class="time">{{item.timeNow}}</text>
+      </view>
+      <view class="content-top-status">
+        {{item.status}}
+      </view>
+    </view>
+    <view class="content-middle">
+      <view class="content-middle-top">
+        <text class="top-left">取快递>>>{{item.ExpressLeiXing}}</text>
+        <text class="top-right">￥{{item.Money}}</text>
+      </view>
+      <view class="content-middle-body">
+        <view class="content-middle-body-lt">
+          <image src="../img/location.png"></image>
+          <text>送达地点</text>
+          <text class="gray">{{item.ExpressAddress}}</text>
+        </view>
+        <view class="content-middle-body-lt">
+          <image src="../img/time.png"></image>
+          <text>送达时间</text>
+          <text class="gray">{{item.ExpressTime}}</text>
+        </view>
+        <view class="content-middle-body-lt">
+          <image src="../img/qq.png"></image>
+          <text>{{item.ExpressQQ}}</text>
+        </view>
+        <view class="content-middle-body-lt">
+            <image src="../img/phone.png"></image>
+            <text>{{item.ExpressPhone}}</text>
+          </view>
+      </view>
+    </view>
+  </view>
+  <!-- 其它任务 -->
+  <view class="otherTask" wx:if="{{title_select == 2}}" wx:for="{{Task}}" wx:key="index">
+     <view class="content-top">
+      <image src="{{item.avatarUrl}}"></image>
+      <view class="content-top-text">
+        <text class="name">{{item.nickName}}</text>
+        <text class="time">{{item.timeNow}}</text>
+      </view>
+      <view class="content-top-status">
+        {{item.status}}
+      </view>
+    </view>
+    <view class="content-middle">
+      <view class="content-middle-top">
+        <text class="top-left">其它任务</text>
+        <text class="top-right">￥{{item.Money}}</text>
+      </view>
+      <view class="content-middle-body">
+        <view class="content-middle-body-lt">
+          <image src="../img/location.png"></image>
+          <text>任务内容:</text>
+          <text class="gray">{{item.TaskContent}}</text>
+        </view>
+        <!-- <view class="content-middle-body-lt">
+          <image src="../img/time.png"></image>
+          <text>送达时间</text>
+          <text class="gray">{{item.ExpressTime}}</text>
+        </view> -->
+        <view class="content-middle-body-lt">
+          <image src="../img/qq.png"></image>
+          <text>{{item.TaskQQ}}</text>
+        </view>
+        <view class="content-middle-body-lt">
+            <image src="../img/phone.png"></image>
+            <text>{{item.TaskPhone}}</text>
+          </view>
+      </view>
+    </view>
+  </view>
+</view>

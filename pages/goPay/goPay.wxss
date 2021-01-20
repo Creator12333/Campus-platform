@@ -1,0 +1,25 @@
+/* pages/goPay/goPay.wxss */
+.text{
+  border: 2px solid red;
+  margin-top: 20rpx;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  padding: 20rpx;
+  border-radius: 30rpx;
+}
+.img{
+  margin-top: 50rpx;
+  display: flex;
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+}
+.img img{
+  width: 300rpx;
+  height: 300rpx;
+}
+.foot{
+  text-align: center;
+  margin-top: 400rpx;
+  font-size: 25px;
+}

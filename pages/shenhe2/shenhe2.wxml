@@ -1,0 +1,16 @@
+<view class="cu-list menu-avatar">
+<view class="cu-item {{modalName=='move-box-' + index?'move-cur':''}}" wx:for="{{ne}}"wx:key="index"   bindtouchstart="ListTouchStart" bindtouchmove="ListTouchMove" bindtouchend="ListTouchEnd" data-target="move-box-{{index}}" style="position: relative">
+      <view class="content" style="position: absolute;left:30rpx">
+        <view class="text-grey">{{item.gongzuomingcheng}}</view>
+        <view class="text-gray text-sm">
+        {{item.zhiweimiaoshu}}</view>
+      </view>
+      <view class="action" style="width:200rpx">
+        <view class="text-grey text-xs" style="color:#f00;font-weight:bold;font-size:28rpx">￥{{item.xinzifuli}}</view>
+      </view>
+      <view class="move">
+        <view class="bg-grey" data-id="{{item._id}}" bindtap="ok">可以发布</view>
+        <view class="bg-red" bindtap="no" data-id="{{item._id}}">禁止发布</view>
+      </view>
+    </view>
+</view>

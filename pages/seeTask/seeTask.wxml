@@ -1,0 +1,18 @@
+<view class="title">
+  <text class="{{select == '已发布' ? 'select' : ''}}" bindtap="selectTap" data-id="已发布">已发布</text>
+  <text class="{{select == '审核中' ? 'select' : ''}}" bindtap="selectTap" data-id="审核中">审核中</text>
+  <text class="{{select == '审核失败' ? 'select' : ''}}" bindtap="selectTap" data-id="审核失败">审核失败</text>
+</view>
+<view class="content" wx:for="{{array}}">
+  <view class="content-top">
+    <view class="content-left">
+      <text class="name">{{item.leiXing}}</text>
+      <text class="time">{{item.timeNow}}</text>
+    </view>
+    <text class="content-right">￥{{item.Money}}</text>
+  </view>
+    <view class="button">
+      <button size="mini" type="primary" bindtap="ok" data-id="{{item._id}}" wx:if="{{item.status == '新发布'}}">已完成</button>
+      <button size="mini" style="background-color:red;color:#fff" bindtap="no" data-id="{{item._id}}">删除</button>
+    </view>
+</view>

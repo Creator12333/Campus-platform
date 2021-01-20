@@ -1,0 +1,25 @@
+<!--<view class="body">
+<view class="demo">发现的地点:{{array.array1}}</view>
+<view class="demo">发现的时间:{{array.faxiandeshijian}}</view>
+<view class="demo">联系方式:{{array.lianxifangshi2}}</view>
+<view class="demo">物品描述:{{array.wupinmiaoshu}}</view>
+<view class="demo">物品图片：</view>
+<!--<image src="{{array.fileList1}}" class="image"></image>-->
+<!--<van-image
+  width="10rem"
+  height="10rem"
+  fit="contain"
+  src="{{array.fileList1}}"
+  bindtap="bindImg"
+  class="img"
+/>
+</view>-->
+<image src="{{array.fileList1}}" mode="aspectFit" class="img"></image>
+<view class="title">{{array.wupinmiaoshu}}</view>
+<view class="price">发现地点：{{array.array1}}<text class="see">浏览次数：{{array.see}}</text></view>
+<view class="back"></view>
+<view class="miaoshu">
+<text>发现时间：{{array.faxiandeshijian}}</text>
+</view>
+<view class="text"><text class="text-text">如果此物与您丢失的物品十分相似，请根据下方联系方式联系发布者，取回物品</text></view>
+<view class="phone">{{array.lianxifangshi2}}</view>

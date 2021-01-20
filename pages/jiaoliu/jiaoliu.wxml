@@ -1,0 +1,23 @@
+<view wx:if="{{show==1}}">
+<view class="head">如有意向在此发布自己的群，请联系QQ:505417246</view>
+<view class="body" wx:for="{{array}}" wx:key="index">
+<view class="left">
+<view class="left-left">
+<image src="{{item.image}}" class="img"></image>
+</view>
+<view class="left-right">
+<view class="left-right-1">{{item.name}}</view>
+<view class="left-right-2">群号:{{item.number}}</view>
+</view>
+</view>
+<view class="right-button">
+<button type="primary" size="mini" bindtap="copy" id="{{item._id}}">复制群号</button>
+</view>
+</view>
+</view>
+<view wx:elif="{{show==2}}">
+<image src="../img/log.png"></image>
+</view>
+<view wx:elif="{{show==0}}">
+
+</view>

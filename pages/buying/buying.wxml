@@ -1,0 +1,36 @@
+<swiper class="screen-swiper round-dot" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500">
+  <swiper-item wx:for="{{banner}}" wx:key="index">
+    <image src="{{item}}" mode='aspectFill'></image>
+  </swiper-item>
+</swiper>
+<view class="VerticalBox">
+  <scroll-view class="VerticalNav nav" scroll-y scroll-with-animation scroll-top="{{VerticalNavTop}}" style="height:calc(100vh - 375rpx);width:300rpx">
+    <view class="cu-item {{index==TabCur?'text-green cur':''}}" wx:for="{{list}}" wx:key bindtap='tabSelect' data-id="{{index}}">
+      {{item.title}}
+    </view>
+  </scroll-view>
+  <scroll-view class="VerticalMain" scroll-y scroll-with-animation style="height:calc(100vh - 375rpx)" scroll-into-view="main-{{MainCur}}" bindscroll="VerticalMain">
+    <view class="padding-top padding-lr" wx:for="{{list}}" wx:key="index" id="main-{{index}}">
+      <view class='cu-bar solid-bottom bg-white'>
+        <view class='action'>
+          <text class='cuIcon-title text-green'></text>{{item.title}} </view>
+      </view>
+      <view class="cu-list menu-avatar">
+        <view class="cu-item" wx:for-items="{{item.product}}" wx:for-item="item_product" style="padding:20rpx" bindtap="showBuying" data-id="{{item_product._id}}">
+          <view class="cu-avatar lg" style="background-image:url({{item_product.fileList}});"></view>
+          <view class="content">
+            <view class="text-cut" style="font-size:26rpx;width:220rpx;font-weight:bold;color:#000;margin-top:20rpx">{{item_product.name}}</view>
+            <view class="text-gray text-sm flex">
+              <text class="text-cut">
+                {{item_product.miaoshu}}
+              </text>
+            </view>
+          </view>
+          <view class="action">
+            <view class="text-grey text-xs" style="color:#f00;font-weight:bold;font-size:30rpx;margin-bottom:90rpx">￥{{item_product.jiage}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

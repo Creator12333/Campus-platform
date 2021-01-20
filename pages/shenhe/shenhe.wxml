@@ -1,0 +1,7 @@
+<button type="primary" bindtap="shenhe1" style="width:60%">闲置</button>
+<button type="primary" bindtap="shenhe2" style="width:60%">兼职</button>
+<button type="primary" bindtap="shenhe3" style="width:60%">失物招领</button>
+<button type="primary" bindtap="shenhe4" style="width:60%">代取快递</button>
+<!-- <view bindtap="shenhe1" class="button">闲置</view>
+<view bindtap="shenhe2" class="button">兼职</view>
+<view bindtap="shenhe3" class="button">失物招领</view> -->

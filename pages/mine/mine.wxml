@@ -1,0 +1,194 @@
+<scroll-view scroll-y class="scrollPage">
+  <view class="UCenter-bg">
+    <button open-type="getUserInfo" bindgetuserinfo="getUserInfo" wx:if="{{login == false}}">授权登录</button>
+    <image src="../img/logo_1.png" class="png" mode="widthFix" style="border-radius:50%" wx:if="{{login == true}}"></image>
+    <view class="text-xl" style="margin-top:30rpx" wx:if="{{login == true}}">校园海滨</view>
+    <view class="margin-top-sm" wx:if="{{login == true}}">
+      <text>By:刘磊磊</text>
+    </view>
+    <image src="https://tva3.sinaimg.cn/large/8d406c5egy1gamn31scsdg20f002skhn.gif" mode="scaleToFill" class="gif-wave"></image>
+  </view>
+  <view class="padding flex text-center text-grey bg-white shadow-warp">
+    <view class="userInfo">
+      <text>个人信息</text>
+      <view class="Info">
+      <image src="{{userInfo.avatarUrl}}" mode="aspectFit" style="width:80rpx;height:80rpx;boder-radius:50%"></image>
+      <text style="margin-top:15rpx;margin-left:20rpx">{{userInfo.nickName}}</text>
+      <text style="margin-top:15rpx;margin-left:30rpx">{{userInfo.gender == 1 ? '男生' : '女生'}}</text>
+      </view>
+    </view>
+    <!-- <view class="flex flex-sub flex-direction solid-right">
+      <view class="text-xxl text-orange">9999</view>
+      <view class="margin-top-sm">
+        <text class="cuIcon-attentionfill"></text> View</view>
+    </view>
+    <view class="flex flex-sub flex-direction solid-right">
+      <view class="text-xxl text-blue">8888</view>
+      <view class="margin-top-sm">
+        <text class="cuIcon-favorfill"></text> Star</view>
+    </view>
+    <view class="flex flex-sub flex-direction">
+      <view class="text-xxl text-green">7777</view>
+      <view class="margin-top-sm">
+        <text class="cuIcon-fork"></text> Fork</view>
+    </view> -->
+  </view>
+  <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
+    <view class="cu-item arrow" wx:if="{{userRoot}}">
+      <view class="content" bindtap="shenhe">
+        <image src="../img/cell_1.png" class="png" mode="aspectFit"></image>
+        <text class="text-grey">审核内容</text>
+      </view>
+    </view>
+    <view class="cu-item arrow">
+      <view class="content" bindtap="seeUp">
+        <image src="../img/cell_2.png" class="png" mode="aspectFit"></image>
+        <text class="text-grey">查看发布</text>
+      </view>
+    </view>
+    <view class="cu-item arrow">
+      <navigator class="content" url="../guanyu/guanyu" hover-class="none">
+        <image src="../img/cell_3.png" class="png" mode="aspectFit"></image>
+        <text class="text-grey">关于平台</text>
+      </navigator>
+    </view>
+    <view class="cu-item arrow">
+      <navigator class="content" url="../seeHelp/seeHelp" hover-class="none">
+        <image src="../img/cell_4.png" class="png" mode="aspectFit"></image>
+        <text class="text-grey">版本情况</text>
+      </navigator>
+    </view>
+    <view class="cu-item arrow">
+      <navigator class="content" url="../tuiguanghezuo/tuiguanghezuo" hover-class="none">
+        <image src="../img/cell_5.png" class="png" mode="aspectFit"></image>
+        <text class="text-grey">联系合作</text>
+      </navigator>
+    </view>
+    <view class="cu-item arrow">
+      <navigator class="content" url="../yijianfankui/yijianfankui" hover-class="none">
+        <image src="../img/cell_6.png" class="png" mode="aspectFit"></image>
+        <text class="text-grey">意见反馈</text>
+      </navigator>
+    </view>
+  </view>
+</scroll-view>
+
+
+<!-- <view class="body" wx:if="{{userRoot}}">
+<button
+wx:if="{{!logged}}"
+open-type="getUserInfo"
+bindgetuserinfo="onGetUserInfo"
+type="primary"
+>
+授权登录
+</button>
+<view class="user" wx:if="{{logged}}">
+  <open-data type="userAvatarUrl" mode="aspectFit" class="img"></open-data>
+  <open-data type="userNickName" lang="zh_CN" class="name"></open-data>
+</view>
+<view class="cell" bindtap="shenhe">
+  <view class="cell_left">
+    <image src="../img/cell_1.png"></image>
+    <text>审核内容</text>
+  </view>
+  <image src="../img/dayu.png"></image>
+</view>
+<view class="cell" bindtap="seeUp">
+  <view class="cell_left">
+    <image src="../img/cell_2.png"></image>
+    <text>查看发布</text>
+  </view>
+  <image src="../img/dayu.png"></image>
+</view>
+<view class="cell" bindtap="guanyu">
+  <view class="cell_left">
+    <image src="../img/cell_3.png"></image>
+    <text>关于平台</text>
+  </view>
+  <image src="../img/dayu.png"></image>
+</view>
+<view class="cell" bindtap="seeHelp">
+  <view class="cell_left">
+    <image src="../img/cell_4.png"></image>
+    <text>版本情况</text>
+  </view>
+  <image src="../img/dayu.png"></image>
+</view>
+<view class="cell" bindtap="lianxihezuo">
+  <view class="cell_left">
+    <image src="../img/cell_5.png"></image>
+    <text>联系合作</text>
+  </view>
+  <image src="../img/dayu.png"></image>
+</view>
+<view class="cell" bindtap="yijianfankui">
+  <view class="cell_left">
+    <image src="../img/cell_6.png"></image>
+    <text>意见反馈</text>
+  </view>
+  <image src="../img/dayu.png"></image>
+</view>
+ <view class="buttom_b">
+    <view class="buttom_view">
+      校园海滨v1.0.7@2020
+    </view>
+  </view>
+</view>
+<view class="body1" wx:if="{{user}}">
+<button
+wx:if="{{!logged}}"
+open-type="getUserInfo"
+bindgetuserinfo="onGetUserInfo"
+type="primary"
+>
+授权登录
+</button>
+<view class="user" wx:if="{{logged}}">
+  <open-data type="userAvatarUrl" mode="aspectFit" class="img"></open-data>
+  <open-data type="userNickName" lang="zh_CN" class="name"></open-data>
+
+  <!-- <image src="{{touxiang}}" mode="aspectFit" class="img"></image>
+  <label class="name">{{name}}</label> -->
+<!-- </view>
+<view class="cell" bindtap="seeUp">
+  <view class="cell_left">
+    <image src="../img/cell_2.png"></image>
+    <text>查看发布</text>
+  </view>
+  <image src="../img/dayu.png"></image>
+</view>
+<view class="cell" bindtap="guanyu">
+  <view class="cell_left">
+    <image src="../img/cell_3.png"></image>
+    <text>关于平台</text>
+  </view>
+  <image src="../img/dayu.png"></image>
+</view>
+<view class="cell" bindtap="seeHelp">
+  <view class="cell_left">
+    <image src="../img/cell_4.png"></image>
+    <text>版本情况</text>
+  </view>
+  <image src="../img/dayu.png"></image>
+</view>
+<view class="cell" bindtap="lianxihezuo">
+  <view class="cell_left">
+    <image src="../img/cell_5.png"></image>
+    <text>联系合作</text>
+  </view>
+  <image src="../img/dayu.png"></image>
+</view>
+<view class="cell" bindtap="yijianfankui">
+  <view class="cell_left">
+    <image src="../img/cell_6.png"></image>
+    <text>意见反馈</text>
+  </view>
+  <image src="../img/dayu.png"></image>
+</view>
+ <view class="buttom_b">
+    <view class="buttom_view">
+      校园海滨v1.0.7@2020
+    </view>
+  </view>
+</view>  -->

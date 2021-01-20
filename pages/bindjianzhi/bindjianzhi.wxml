@@ -1,0 +1,23 @@
+<!--<view class="body" >
+<view class="demo">职位：{{array.gongzuomingcheng}}</view>
+<view class="demo">工作地点：{{array.gongzuodidian}}</view>
+<view class="demo">工作时间:{{array.gongzuoshijian}}</view>
+<view class="demo">联系方式：{{array.lianxifangshi1}}</view>
+<view class="demo">人员要求:{{array.renyuanyaoqiu}}</view>
+<view class="demo">薪资待遇：{{array.xinzifuli}}</view>
+<view class="demo">工作内容：{{array.zhiweimiaoshu}}</view>
+</view>
+<view class="foot">
+<text>本平台支持所有人发布兼职信息，请仔细确认兼职的真实性，具备基本的防范意识，鉴别发布者是否为海滨学院内及附近的人员，如果上当受骗，请联系开发者提供发布者信息，轻则平台及校内通报，重则交给公安局处理</text>
+</view>-->
+<view class="title">{{array.gongzuomingcheng}}</view>
+<view class="money">{{array.xinzifuli}}</view>
+<view class="work">{{array.renyuanyaoqiu}}<text class="see">浏览次数：{{array.see}}</text></view>
+<view class="demo3">工作地点</view>
+<view class="where">{{array.gongzuodidian}}</view>
+<view class="demo4">工作时间</view>
+<view class="time">{{array.gongzuoshijian}}</view>
+<view class="demo">职位描述</view>
+<view class="renwu">{{array.zhiweimiaoshu}}</view>
+<view class="demo1">联系方式</view>
+<view class="phone">{{array.lianxifangshi1}}</view>

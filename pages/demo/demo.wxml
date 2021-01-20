@@ -1,0 +1,5 @@
+<view>
+ <!-- <image src="../img/log.png" mode="aspectFill" class="log"></image> -->
+ <image src="../img/1.png" mode="aspectFill" class="background"></image>
+ <view class="button" bindtap="go">点击跳过{{number}}</view>
+</view>
