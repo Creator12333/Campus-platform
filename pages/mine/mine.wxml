@@ -17,21 +17,6 @@
       <text style="margin-top:15rpx;margin-left:30rpx">{{userInfo.gender == 1 ? '男生' : '女生'}}</text>
       </view>
     </view>
-    <!-- <view class="flex flex-sub flex-direction solid-right">
-      <view class="text-xxl text-orange">9999</view>
-      <view class="margin-top-sm">
-        <text class="cuIcon-attentionfill"></text> View</view>
-    </view>
-    <view class="flex flex-sub flex-direction solid-right">
-      <view class="text-xxl text-blue">8888</view>
-      <view class="margin-top-sm">
-        <text class="cuIcon-favorfill"></text> Star</view>
-    </view>
-    <view class="flex flex-sub flex-direction">
-      <view class="text-xxl text-green">7777</view>
-      <view class="margin-top-sm">
-        <text class="cuIcon-fork"></text> Fork</view>
-    </view> -->
   </view>
   <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
     <view class="cu-item arrow" wx:if="{{userRoot}}">

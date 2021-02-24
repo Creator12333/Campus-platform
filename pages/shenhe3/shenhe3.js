@@ -61,7 +61,7 @@ Page({
   },
 ok(res){
   var that=this
-  var id=res.target.id
+  var id=res.target.dataset.id
   console.log("id:",id)
   wx.cloud.callFunction({
     name:'shenHe',
@@ -190,7 +190,7 @@ ok(res){
 },
 no(res){
   var that = this
-  var id = res.target.id;
+  var id = res.target.dataset.id;
   wx.cloud.callFunction({
     name:'shenHe',
     data:{

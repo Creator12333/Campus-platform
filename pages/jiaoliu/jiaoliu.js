@@ -6,7 +6,8 @@ Page({
    */
   data: {
     array:[],
-    show:0
+    show:0,
+    imgUrl:''
   },
   copy(res){
     var that=this;
@@ -43,31 +44,46 @@ Page({
       title: '加载中',
     })
     var that = this;
-    var show = '';
-    var array = [];
-    db.collection('jiaoLiuGroup').get({
+    db.collection('freeClassroom').get({
       success(res){
-        console.log('成功',res.data)
-        if(res.data.length==0){
-          show = 2;
-        }else{
-          show = 1;
-          array = res.data
-        }
+        console.log(res.data[0]);
+        that.setData({
+          imgUrl:res.data[0].img_src
+        })
         wx.hideLoading({
           success: (res) => {},
         })
-        that.setData({
-          show:show,
-          array:array
-        })
-        console.log(that.data.show)
-        console.log(that.data.array)
       },
       fail(res){
-        console.log(res)
+        console.log(res);
       }
     })
+    // var that = this;
+    // var show = '';
+    // var array = [];
+    // db.collection('jiaoLiuGroup').get({
+    //   success(res){
+    //     console.log('成功',res.data)
+    //     if(res.data.length==0){
+    //       show = 2;
+    //     }else{
+    //       show = 1;
+    //       array = res.data
+    //     }
+    //     wx.hideLoading({
+    //       success: (res) => {},
+    //     })
+    //     that.setData({
+    //       show:show,
+    //       array:array
+    //     })
+    //     console.log(that.data.show)
+    //     console.log(that.data.array)
+    //   },
+    //   fail(res){
+    //     console.log(res)
+    //   }
+    // })
   },
 
   /**

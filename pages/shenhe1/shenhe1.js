@@ -63,7 +63,7 @@ Page({
   },
   ok(res) {
     var that = this
-    var id = res.target.id
+    var id = res.target.dataset.id
     console.log("id: ", id)
     var array = [];
     // var fileList = []
@@ -101,7 +101,8 @@ Page({
   },
   no(res) {
     var that = this
-    var id = res.target.id;
+    var id = res.target.dataset.id;
+    console.log(id);
     var array = []
     var fileList = []
     wx.cloud.callFunction({
@@ -131,30 +132,30 @@ Page({
         })
         }
     })
-    db.collection('fabu').doc(id).update({
-      data:{
-        shenhe:'失败'
-      },
-      success(res){
-        console.log('修改数据成功');
-        wx.switchTab({
-          url: '../mine/mine',
-      })
-      wx.showToast({
-         title: '审核成功(不通)',
-      })
+    // db.collection('fabu').doc(id).update({
+    //   data:{
+    //     shenhe:'失败'
+    //   },
+    //   success(res){
+    //     console.log('修改数据成功');
+    //     wx.switchTab({
+    //       url: '../mine/mine',
+    //   })
+    //   wx.showToast({
+    //      title: '审核成功(不通)',
+    //   })
 
-       },
-       fail(res){
-         console.log('修改数据失败',res)
-         wx.switchTab({
-          url: '../mine/mine',
-        })
-        wx.showToast({
-         title: '审核失败',
-        })
-        }
-    })
+    //    },
+    //    fail(res){
+    //      console.log('修改数据失败',res)
+    //      wx.switchTab({
+    //       url: '../mine/mine',
+    //     })
+    //     wx.showToast({
+    //      title: '审核失败',
+    //     })
+    //     }
+    // })
   },
   /**
    * 生命周期函数--监听页面加载

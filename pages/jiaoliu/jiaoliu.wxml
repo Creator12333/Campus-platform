@@ -1,4 +1,4 @@
-<view wx:if="{{show==1}}">
+<!-- <view wx:if="{{show==1}}">
 <view class="head">如有意向在此发布自己的群，请联系QQ:505417246</view>
 <view class="body" wx:for="{{array}}" wx:key="index">
 <view class="left">
@@ -20,4 +20,6 @@
 </view>
 <view wx:elif="{{show==0}}">
 
-</view>
+</view> -->
+
+<image src="{{imgUrl}}" mode="aspectFill"></image>

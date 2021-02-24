@@ -1,4 +1,4 @@
-/* pages/jiaoliu/jiaoliu.wxss */
+/* pages/jiaoliu/jiaoliu.wxss
 .demo{
   margin-left: 50rpx;
 }
@@ -43,4 +43,12 @@
   padding-top: 20rpx;
   width: 100rpx;
   height: 100rpx;
+} */
+page {
+  width: 100%;
+  height: 100%;
+}
+image {
+  height: 100%;
+  width: 100%;
 }

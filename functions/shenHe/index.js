@@ -11,6 +11,7 @@ const db = cloud.database()
 // event 为调用此云函数传递的参数，传递的参数可通过event.xxx得到
 
 exports.main = async (event, context) => {
+  console.log(event);
   try {
     return await db.collection(event.jihe).doc(event.id).update({
       // data 为 users 集合内我要修改的内容 lover 为字段名 event.lover 为要修改成的内容
