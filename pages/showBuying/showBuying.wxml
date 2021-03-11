@@ -26,8 +26,9 @@
 </view>
 <view class="text"><text class="text-text">如购买有意向，根据下面联系方式和发布者洽谈进行线下交易，以确保物品质量</text></view>
 <view class="phone">{{array.lianxifangshi}}</view>
+
+
 <view class="foot">
-    <view class="foot_1" bindtap="go_pay">立即付款</view>
-    <view class="foot_2" bindtap="get_number">复制联系方式</view>
-  <!--<button type="primary" style="width:50%;" class="foot_button" bindtap="get_number">复制联系方式</button>-->
+    <view class="foot_1" bindtap="selectCollection" bindtap="get_number">复制联系方式</view>
+    <view class="foot_2" bindtap="go_pay">立即付款</view>
 </view>

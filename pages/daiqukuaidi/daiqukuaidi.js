@@ -42,9 +42,9 @@ Page({
           name:'selectExpress',
           success(res){
             for(var i = 0; i < res.result.data.length; i++){
-              if(res.result.data[i].leiXing == '代取快递'){
+              if(res.result.data[i].leiXing == '代取快递' && res.result.data[i].shenHe == '已发布'){
                Express.push(res.result.data[i]);
-              }else if(res.result.data[i].leiXing == '其它任务'){
+              }else if(res.result.data[i].leiXing == '其它任务' && res.result.data[i].shenHe == '已发布'){
                 Task.push(res.result.data[i])
               }
             }

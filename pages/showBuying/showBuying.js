@@ -8,7 +8,7 @@ Page({
   data: {
     array:[],
     data1: [],
-    dataId: '',
+    dataId: ''
   },
   go_pay(res){
     var that=this

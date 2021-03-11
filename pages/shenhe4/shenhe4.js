@@ -72,8 +72,10 @@ Page({
         for(var i = 0; i < res.data.length; i++){
           if(res.data[i].leiXing == '代取快递' && res.data[i].shenHe == '审核中'){
             Express.push(res.data[i]);
+            console.log('Express---------');
           }else if(res.data[i].leiXing == '其它任务' && res.data[i].shenHe == '审核中'){
             Task.push(res.data[i]);
+            console.log('Express---------');
           }
         }
         that.setData({

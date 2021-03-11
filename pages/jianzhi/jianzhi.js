@@ -108,7 +108,8 @@ Page({
   },
   bindjianzhi(event) {
     let that = this
-    let qqq=event.target.id
+    let qqq=event.currentTarget.dataset.id;
+    console.log(event)
     wx.cloud.callFunction({
       name:'findWhere',
       data:{
